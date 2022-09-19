@@ -17,7 +17,6 @@ const WeaponInfoCard = () => {
   useEffect(() => {
     setDetails(weapons.find((weapon) => weapon.uuid === uuid));
     setLoading(false);
-    console.log(details);
   }, [weapons]);
   if(details?.displayIcon===null) return (<span>No preview images available</span>);
   if (loading) return <img src={load} />;
@@ -47,7 +46,7 @@ const WeaponInfoCard = () => {
               <div className="mt-3 font-black uppercase font-din text-xl ">
                 Weapon Stats :
               </div>
-              <div class="grid grid-cols-3 gap-4 mx-10 my-5 capitalize">
+              <div className="grid grid-cols-3 gap-4 mx-10 my-5 capitalize">
                 <div>fire Rate : {details?.weaponStats.fireRate}</div>
                 <div>
                   first Bullet Accuracy :

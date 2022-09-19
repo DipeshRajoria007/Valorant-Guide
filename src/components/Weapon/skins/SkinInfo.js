@@ -6,16 +6,13 @@ const SkinInfo = () => {
   const { uuid } = useParams();
   const baseUrl = `https://valorant-api.com/v1/weapons/skins/`;
   const [skin, setSkin] = useState({});
-  console.log(uuid);
   const fetchSkin = async (uuid) => {
     const res = await axios.get(`${baseUrl}${uuid}`);
     setSkin(res.data.data);
   };
   useEffect(() => {
     fetchSkin(uuid);
-    console.log(skin);
   }, []);
-  console.log(skin.levels);
   return (
     <div className="bg-lightRed min-h-screen flex flex-col p-10 items-center font-din uppercase tracking-tight text-dark ">
       <h1 className="text-5xl">{skin.displayName}</h1>

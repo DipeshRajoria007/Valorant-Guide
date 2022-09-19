@@ -1,7 +1,7 @@
 import React from "react";
 
 const GearCard = ({ gear }) => {
-  console.log(gear);
+  
   return (
     <div className="grid grid-rows-2 gap-3 items-center  w-[24rem] h-[32rem] justify-items-center font-poppins bg-darkRed text-white drop-shadow-xl hover:drop-shadow-2xl hover:scale-105 duration-500 ">
       <div className="">

@@ -21,7 +21,6 @@ const AgentInfoCard = () => {
   useEffect(() => {
     fetchAgent(uuid);
   }, []);
-  console.log(agent);
   if (loading)
     return <img src={load} alt="loading" className="w-[100%] scale-110" />;
 

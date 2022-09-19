@@ -28,7 +28,6 @@ const Weapons = () => {
   }, []);
   useEffect(() => {
     setNewWeapons(weapons);
-    // console.log(weapons);
   }, [weapons]);
 
   const customStyles = {
@@ -53,7 +52,6 @@ const Weapons = () => {
     menu: (provided, state) => ({
       ...provided,
       borderRadius: "0",
-      // padding:'6px',
       backgroundColor: state.isSelected ? "#dc3d4b" : "#fa4454",
     }),
     menuList: (provided, state) => ({
@@ -64,10 +62,7 @@ const Weapons = () => {
       backgroundColor: state.isFocused ? "#dc3d4b" : "#fa4454",
     }),
     container: (provided, state) => ({
-      // none of react-select's styles are passed to <Control />
       ...provided,
-      // borderColor: state.isFocused ? 'white' : 'white',
-      // borderColor: state.isSelected ? "#fa4454" : "white" ,
       padding: ".75rem",
     }),
     valueContainer: (provided, state) => ({
@@ -92,14 +87,14 @@ const Weapons = () => {
         )
       : setNewWeapons(weapons);
   }, [selectedValue]);
-  console.log(selectedValue);
+  // console.log(selectedValue);
 
   return (
     <div className="relative bg-lightRed min-h-[100vh] ">
       <div className="absolute  right-16 pt-[6rem] ">
         <Select
           styles={customStyles}
-          value={console.log(selectedValue)}
+          // value={console.log(selectedValue)}
           placeholder={"All Weapons"}
           options={options}
           onChange={handleChange}

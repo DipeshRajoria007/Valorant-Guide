@@ -96,9 +96,9 @@ const Home = () => {
             className=" absolute z-10 top-24 right-72  h-[80%] hover:scale-110 duration-500 "
           />
           <div className=" absolute right-80  top-[80px]  font-akira  ">
-            {[...Array(7)].map((idx) => (
+            {[...Array(7)].map((i,index) => (
               <h1
-                key={idx}
+                key={index}
                 className=" leading-[5.5rem] drop-shadow-xl text-7xl text-lightRed "
               >
                 RAZE
@@ -175,7 +175,6 @@ text-white flex flex-col items-center gap-2 "
             <input
               type="email"
               placeholder="Email"
-              value=""
               className="w-[50%] h-10 p-4 text-white bg-lightRed  hover:drop-shadow-2xl "
             />
             <button className="bg-lightRed h-10 px-6 text-sm hover:drop-shadow-2xl ">Submit</button>

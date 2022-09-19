@@ -1,9 +1,8 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import Weapon from "./Weapon"
 
 const WeaponGrid = ({weapons}) => {
     
-    console.log(weapons);
   return (
     <div className="grid grid-cols-3 gap-4" >
         {
